@@ -52,6 +52,7 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
         dba.testEmail(db, email, function(err, msg) {
           if(err) throw err;
           if(msg == null) {
+            console.log("pre send");
             sendEmail.sendEmail(email);
             res.render(__dirname + "/views/" + 'index',{email:email + " added"});
           } else {
