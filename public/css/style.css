@@ -1,0 +1,94 @@
+body {
+  background-color: #fff;
+}
+h1 {
+  font-size: 120px !important;
+  color: #fff !important;
+  letter-spacing: 3px;
+  margin-bottom: -10px;
+}
+h4 {
+  color: #fff;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  margin-bottom: -10px;
+}
+.jumbotron {
+  background-color: #1abc9c;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+.top {
+  padding-top: 30px;
+}
+.bottom {
+}
+.top .jumbotron {
+  padding-bottom: 60px;
+  border-radius: 0px;
+}
+.bottom .jumbotron {
+  background-color: #fff;
+  padding-top: 0px;
+}
+.col-md-12, .container, .column {
+  width: 100%;
+  padding: 0px;
+  border-radius: none;
+}
+
+.list-group, .list-group-item {
+  padding-left: 15px;
+  width: auto;
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+}
+button, input {
+  border-radius: 0px !important;
+}
+.input-group{
+  width: 70%;
+}
+
+.signup .jumbotron{
+  padding: 0px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.btn-success {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.btn-success:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  opacity: 0.8;
+}
+.about {
+  padding-right: 420px;
+  margin-left: 5px;
+  margin0right: 5px;
+  color: #fff;
+}
+@media (min-width: 50px) and (max-width: 600px){
+  .about {
+    padding-right: 0px;
+    margin-left: 15px;
+    margin0right: 15px;
+  }
+}
+.footer {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  background-color: #000;
+  height: 30px;
+  background-color: #ECF0F1;
+  padding-top: 5px;
+}
+a:link {
+    color: #000;
+}
