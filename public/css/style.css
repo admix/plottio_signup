@@ -93,6 +93,9 @@ and (max-device-width : 568px) {
   .container {
     width: 120%;
   }
+  .input-group{
+    width: 70%;
+  }
 }
 
 .footer {
