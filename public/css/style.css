@@ -87,6 +87,11 @@ button, input {
   }
 }
 */
+@media (max-width: 320px){
+  .container {
+    width: 120%;
+  }
+}
 .footer {
   margin-top: 20px;
   margin-bottom: 0px;
