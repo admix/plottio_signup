@@ -87,11 +87,14 @@ button, input {
   }
 }
 */
-@media (max-width: 320px){
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
   .container {
-    width: 120%;
+    width: 110%;
   }
 }
+
 .footer {
   margin-top: 20px;
   margin-bottom: 0px;
