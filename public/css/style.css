@@ -6,6 +6,7 @@ h1 {
   color: #fff !important;
   letter-spacing: 3px;
   margin-bottom: -10px;
+  width: inherit;
 }
 h4 {
   color: #fff;
@@ -27,6 +28,7 @@ h4 {
 .top .jumbotron {
   padding-bottom: 60px;
   border-radius: 0px;
+  width: 100%;
 }
 .bottom .jumbotron {
   background-color: #fff;
@@ -53,7 +55,9 @@ button, input {
 }
 
 .signup .jumbotron{
+  margin: 0 auto;
   padding: 0px;
+  padding-left: 15px;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
