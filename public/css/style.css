@@ -91,7 +91,7 @@ button, input {
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
   .container {
-    width: 110%;
+    width: 120%;
   }
 }
 
