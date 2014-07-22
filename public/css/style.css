@@ -24,6 +24,14 @@ h4 {
   padding-top: 30px;
 }
 .bottom {
+  margin: 0 auto;
+  width: 90%;
+}
+.bottom .col-md-8 {
+  width: 75%;
+}
+.bottom .col-md-4 {
+  width: 24%;
 }
 .top .jumbotron {
   padding-bottom: 60px;
@@ -33,6 +41,8 @@ h4 {
 .bottom .jumbotron {
   background-color: #fff;
   padding-top: 0px;
+  width: 72%;
+  padding-right: 5px;
 }
 .col-md-12, .container, .column {
   width: 100%;
@@ -95,6 +105,12 @@ and (max-device-width : 568px) {
   }
   .input-group{
     width: 90%;
+  }
+  .bottom .col-md-8 {
+    width: 90%;
+  }
+  .bottom .col-md-4 {
+    width: 70%;
   }
 }
 
