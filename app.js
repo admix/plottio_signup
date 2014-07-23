@@ -54,7 +54,6 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
           if(msg == null) {
             sendEmail.sendEmail(email);
             res.render(__dirname + "/views/" + 'index',{email:email + " added"});
-            $(".greeting").text("Welcome!");
           } else {
             res.render(__dirname + "/views/" + 'index',{email:email + " already used"});
           }

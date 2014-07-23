@@ -17,13 +17,13 @@ function sendEmail(user) {
   });
 
 
-  var body = "<b>Hi there!</b><ul>Wouldn’t it be great if:<li>You could read/write articles that are created by fellow users in real-time without media bias in between?</li><li>You could show your savvy in areas that you are hooked on and inspire the rest of the world?</li><li>You could read it as an online newspaper interconnected with anyone on the resource?</li><li>You would not have to stick to 140 characters limit?</li></ul><p>You could be a part in our Social Journalism Revolution?✔ </p>"
+  var body = '<p>Here we meet again,<br><br>Plottio Team would like to thank you for the support of this Social Journalism Revolution.<br><br>We know as a fact, that only together we can accomplish something as tremendous and we deeply value your contribution. An early access is just a small gift that will not suffice to express our gratitude. While we are working tirelessly on creating the best experience, please share the word with your social circles to help us achieve this goal.<br><br>P.S. Information on the website will be constantly updated to give you a "behind the scenes" insight on our progress, so feel free to check back anytime soon. Until next time.<br><br>Yours truly,<br><br>Plottio Team</p>'
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: "Alexander Snurnikov ✔ <admix.software@gmail.com>", // sender address
+      from: "✔ Plottio Team <support@gmail.com>", // sender address
       to: user, // list of receivers
       subject: "Wellcome to Plottio ✔", // Subject line
-      text: "Hi there! ✔", // plaintext body
+      //text: "Hi there! ✔", // plaintext body
       html: body// html body
   }
 
