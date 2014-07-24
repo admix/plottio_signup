@@ -92,7 +92,7 @@ button, input, .btn-sm {
   margin-bottom: 30px;
   background-color: #fff;
 }
-.btn-success {
+.btn-success, .btn-success:disabled, .btn-success:active, .btn-success:focus {
   background-color: #1abc9c;
   border-color: #1abc9c;
 }
