@@ -1,6 +1,10 @@
 $(document).ready(function() {
   $(["[data-toggle='tooltip']"]).tooltip();
+  //URLs for dev
+  var localhost = 'http://localhost:8080/',
+      plottio = 'http://plottio.com/';
 
+  // Submiting emails
   $("#submit").click(function(e) {
     e.preventDefault();
     //console.log('submit clicked');
@@ -10,7 +14,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: 'http://plottio.com/',
+      url: plottio,
       success: function(data) {
         processSuccess(data);
       },
