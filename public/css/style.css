@@ -152,11 +152,15 @@ and (max-device-width : 568px) {
   .input-group{
     width: 90%;
   }
-  .bottom .col-md-8 {
+  .bottom .col-md-8, #signup .col-md-8 {
     width: 90%;
   }
   .bottom .col-md-4 {
     width: 70%;
+  }
+  #signup .col-md-4 {
+    width: 90%;
+    height: auto;
   }
 }
 .twitter {
