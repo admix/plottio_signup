@@ -10,7 +10,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: 'http://localhost:8080/',
+      url: 'http://localhost:80/',
       success: function(data) {
         processSuccess(data);
       },
