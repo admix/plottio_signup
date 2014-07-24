@@ -20,6 +20,17 @@ h4 {
   margin-bottom: 0px;
   border-radius: 0px;
 }
+.progress {
+  border-radius: 0px;
+  width: 50%;
+  margin: 0 auto;
+}
+.progress-bar {
+  background-color: #e54850;
+}
+#progr:hover {
+  opacity: 0.8;
+}
 .top {
   padding-top: 30px;
 }
