@@ -10,7 +10,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: 'http://localhost:80/',
+      url: 'http://plottio.com/',
       success: function(data) {
         processSuccess(data);
       },
