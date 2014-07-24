@@ -101,11 +101,27 @@ button, input, .btn-sm {
   border-color: #1abc9c;
   opacity: 0.8;
 }
+#pen {
+}
+#pen img{
+  width: 100%;
+  height: auto;
+}
+#signup .jumbotron {
+  padding-left: 30px;
+  width: 77%;
+}
+#signup .signup {
+  width: 100%;
+  padding: 0px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .about {
-  padding-right: 420px;
-  margin-left: 5px;
-  margin0right: 5px;
-  color: #fff;
+  font-size: 17px;
+  text-align: justify;
+  line-height: 2.4;
+  color: #333;
 }
 /* Not used
 @media (min-width: 50px) and (max-width: 600px){
@@ -139,6 +155,10 @@ and (max-device-width : 568px) {
 }
 .twitter:hover {
   opacity: 0.8;
+}
+
+#join {
+  width: 100%;
 }
 .footer {
   margin-top: 20px;

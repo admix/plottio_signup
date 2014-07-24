@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $("#signup").hide();
   $(["[data-toggle='tooltip']"]).tooltip();
   //URLs for dev
   var localhost = 'http://localhost:8080/',
@@ -14,7 +15,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: plottio,
+      url: localhost,
       success: function(data) {
         processSuccess(data);
       },
@@ -24,6 +25,12 @@ $(document).ready(function() {
     });
   });
 
+  $("#join").click(function(e) {
+    e.preventDefault();
+    $("#join").slideUp();
+    $("#signup").slideDown("slow");
+    scrollToAnchor("id1");
+  })
   function processSuccess(data) {
     console.log(data.res);
     if(data.res == "already used") {
@@ -36,5 +43,10 @@ $(document).ready(function() {
       $("#revo").html("Now you are a part of Social Journalism Revolution!");
       $("#revo").css("text-decoration","underline");
     }
+  }
+
+  function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
   }
 });
