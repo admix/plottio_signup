@@ -110,7 +110,6 @@ button, input, .btn-sm {
 .signup .jumbotron{
   margin: 0 auto;
   padding: 0px;
-  padding-left: 15px;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -133,8 +132,7 @@ button, input, .btn-sm {
   margin-top: 40px;
 }
 #signup .jumbotron {
-  padding-left: 30px;
-  width: 77%;
+  width: 100%;
 }
 #signup .signup {
   width: 100%;
@@ -157,16 +155,25 @@ button, input, .btn-sm {
   }
 }
 */
+@media
+and (min-width : 420px) {
+  body {
+    color: red !important;
+  }
+}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
+  /*body {
+    color: red;
+  }
   .container {
     width: 120%;
   }
   .input-group{
     width: 90%;
   }
-  .bottom .col-md-8, #signup .col-md-8 {
+  .bottom .col-md-8, #signup .col-md-12 {
     width: 90%;
   }
   .bottom .col-md-4 {
@@ -178,7 +185,7 @@ and (max-device-width : 568px) {
   }
   .jumbotron {
     width: 130%;
-  }
+  }*/
 }
 .twitter {
   height: 28px;
