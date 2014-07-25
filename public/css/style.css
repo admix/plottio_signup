@@ -92,17 +92,6 @@ button, input, .btn-sm {
   border-radius: 0px !important;
 }
 
-.custom-tweet-button a {
-  display: block;
-  margin-left: -15px;
-  padding: 5px 8px 5px 24px;
-  background: url('https://twitter.com/favicons/favicon.ico') 1px center no-repeat;
-  border: 1px solid #ccc;
-}
-.custom-tweet-button a:hover {
-  text-decoration: none;
-  opacity: 0.8;
-}
 .input-group{
   width: 70%;
 }
