@@ -17,6 +17,9 @@ h4 {
   letter-spacing: 0.5px;
   margin-bottom: -10px;
 }
+h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -173,6 +176,9 @@ and (max-device-width : 568px) {
     width: 90%;
     height: auto;
   }
+  .jumbotron {
+    width: 130%;
+  }
 }
 .twitter {
   height: 28px;
@@ -212,5 +218,8 @@ a:link {
 .content {
   display: block;
   margin: 0 auto;
+}
+.row {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 /****/
