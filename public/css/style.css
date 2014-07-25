@@ -1,18 +1,25 @@
 body {
   background-color: #fff;
 }
-h1 {
+h1 a{
   font-size: 120px !important;
   color: #fff !important;
   letter-spacing: 3px;
   margin-bottom: -10px;
   width: inherit;
 }
+h1 a:hover {
+  text-decoration: none;
+}
 h4 {
   color: #fff;
   opacity: 0.7;
   letter-spacing: 0.5px;
   margin-bottom: -10px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 .jumbotron {
   background-color: #1abc9c;
@@ -72,8 +79,11 @@ button, input, .btn-sm {
   border-radius: 0px !important;
 }
 .fb {
-  height: 26px;
-  widht: 74px;
+  padding-top: 0px;
+}
+.social span {
+  padding-top: 0px;
+  vertical-align: top !important;
 }
 .col-md-4 * {
   border-radius: 0px !important;
@@ -112,11 +122,12 @@ button, input, .btn-sm {
   border-color: #1abc9c;
   opacity: 0.8;
 }
-#pen {
-}
 #pen img{
   width: 100%;
   height: auto;
+}
+#signup {
+  margin-top: 40px;
 }
 #signup .jumbotron {
   padding-left: 30px;
@@ -179,11 +190,27 @@ and (max-device-width : 568px) {
   margin-top: 20px;
   margin-bottom: 0px;
   background-color: #000;
-  height: 30px;
+  height: 40px;
   background-color: #ECF0F1;
   padding-top: 5px;
 }
 
 a:link {
-    color: #000;
+  color: #000;
 }
+
+/** Variant with pics **/
+.row2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.center-img {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+.content {
+  display: block;
+  margin: 0 auto;
+}
+/****/
