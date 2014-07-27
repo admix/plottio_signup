@@ -200,7 +200,7 @@ and (max-device-width : 568px) {
   padding-top: 5px;
 }
 
-a:link {
+#logo a:link {
   color: #000;
 }
 
@@ -220,5 +220,17 @@ a:link {
 }
 .row {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.btn-twitter {
+  color: #333;
+}
+.btn-twitter:hover *{
+  color: #fff;
+}
+.btn-twitter a {
+  color: #333;
+}
+.btn-twitter a:hover {
+  text-decoration: none;
 }
 /****/
