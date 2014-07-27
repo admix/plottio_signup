@@ -155,11 +155,11 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) {
   /*body {
     color: red;
-  }
+  }*/
   .container {
     width: 120%;
   }
-  .input-group{
+  /*.input-group{
     width: 90%;
   }
   .bottom .col-md-8, #signup .col-md-12 {
