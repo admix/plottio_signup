@@ -92,10 +92,6 @@ button, input, .btn-sm {
   border-radius: 0px !important;
 }
 
-.input-group{
-  width: 70%;
-}
-
 .signup .jumbotron{
   margin: 0 auto;
   padding: 0px;
@@ -205,6 +201,19 @@ and (max-device-width : 568px) {
 }
 
 /** Variant with pics **/
+.hello {
+  text-align: center;
+}
+.explain {
+  font-size: 18px;
+  text-align: left;
+}
+.pre-join {
+  margin-bottom: 30px;
+}
+.icons {
+  font-size: 18px;
+}
 .row2 {
   margin-top: 40px;
   margin-bottom: 20px;
