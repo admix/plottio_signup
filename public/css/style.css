@@ -17,9 +17,6 @@ h4 {
   letter-spacing: 0.5px;
   margin-bottom: -10px;
 }
-h2 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -112,9 +109,6 @@ button, input, .btn-sm {
 #pen img{
   width: 100%;
   height: auto;
-}
-#signup {
-  margin-top: 40px;
 }
 #signup .jumbotron {
   width: 100%;
