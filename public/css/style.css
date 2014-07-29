@@ -227,16 +227,17 @@ and (max-device-width : 568px) {
 /** Variant with pics **/
 .hello {
   text-align: center;
+  font-size: 16px;
 }
 .explain {
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
 }
 .pre-join {
   margin-bottom: 30px;
 }
 .icons {
-  font-size: 18px;
+  font-size: 16px;
 }
 .icons p {
   display: inline;
@@ -254,6 +255,9 @@ and (max-device-width : 568px) {
 .content {
   display: block;
   margin: 0 auto;
+}
+.container {
+  line-height: 1.8;
 }
 .row {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;

@@ -28,9 +28,9 @@ function sendEmail(user) {
   var body = styles + logoHeader + emailHeader + emailStart + emailBody + emailEnd + emailBye;
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: "✔ Plottio Team <support@gmail.com>", // sender address
+      from: "Plottio Team <support@gmail.com>", // sender address
       to: user, // list of receivers
-      subject: "Wellcome to Plottio ✔", // Subject line
+      subject: "Welcome to Plottio", // Subject line
       //text: "Hi there! ✔", // plaintext body
       html: body// html body
   }
