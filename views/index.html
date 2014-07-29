@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Plottio</title>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/social-buttons.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -20,11 +22,10 @@
     </script>
     <div class="container">
       <div class="row clearfix top">
-        <div class="col-md-12 column">
+        <div class="col-sm-10 column">
           <div class="jumbotron">
             <h1 id="logo" class="text-center"><a href="http://plottio.com">Plottio</a></h1>
-            <h4 class="text-center"><em>Reinventing Journalism...</em></h4>
-            <h4 class="text-center"><em>comming soon...</em></h4>
+            <h4 class="text-center"><em>Reinventing Journalism!</em></h4>
             <br>
             <div class="progress">
               <div id="progr" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
@@ -34,73 +35,122 @@
           </div>
         </div>
       </div>
-      <div class="row clearfix bottom">
-        <div class="col-md-12">
-          <h2>Hi there!</h2>
-          <h3>Wouldn’t it be great if:</h3>
-          <ul class="list-group">
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could read/write articles that are created by fellow users in real-time without media bias in between?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could show your savvy in areas that you are hooked on and inspire the rest of the world?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could read it as an online newspaper interconnected with anyone on the resource?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You would not have to stick to 140 characters limit?</li>
-          </ul>
-          </p>
-        </div>
-      </div>
-      <div class="row clearfix">
-        <button id="join" class="btn btn-success btn-lg">Participate</button>
-      </div>
-      <div id="signup">
-        <div class="row clearfix bottom">
-          <div class="col-md-8">
-            <div class="jumbotron about">
-              <h3>Write, Read, Share, Connect and Inspire with ease.</h3>
-              &nbsp;We are revolutionizing social journalism by empowering people to share their stories with the whole world.  Stories that are written by real people for real people with no media bias in between. Ideas that are connected in newspaper-like format and you are an essential part of it. We let you concentrate on the main thing – your thoughts.
-              <br>Start plotting now and you might become our new star contributor.
+      <div class="row row-centered">
+        <div class="col-sm-6 col-centered col-sm-offset-3">
+          <div class="item">
+            <div class="content hello">
+              <h2>Hi there! Wouldn’t it be great if:</h2>
             </div>
           </div>
-          <div id="pen" class="col-md-4">
-            <img src="images/pen.jpg" alt="pen">
+        </div>
+      </div>
+      <div class="row row-centered icons">
+        <div class="col-sm-4 col-centered col-sm-offset-1">
+          <div class="item">
+            <img class="center-img" src="images/laptop.png" alt="laptop">
+            <div class="content">
+              <div class="col-xs-1">
+                <span class="glyphicon glyphicon-ok"></span>
+              </div>
+              <div class="col-xs-10">
+                <p>You could read/write articles that are created by fellow users in real-time without media bias in between?</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row clearfix signup">
-          <div class="col-md-12">
-            <div class="jumbotron">
-              <h3 id="revo">You could be a part of Social Journalism Revolution!</h3>
-              <div class="input-group input-group-lg">
-                <input type="email" class="form-control" placeholder="Your email" id="email" name="email">
-                <span class="input-group-btn">
-                <button id="submit" type="submit" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="right" title="Early Access">
-                <span class="glyphicon glyphicon-saved"></span>&nbsp; Join</button>
-                </span>
-                <a name="id1"/>
+        <div class="col-sm-4 col-centered col-sm-offset-2">
+          <div class="item">
+            <img class="center-img" src="images/globe.png" alt="globe">
+            <div class="content">
+              <div class="col-xs-1">
+                <span class="glyphicon glyphicon-ok"></span>
+              </div>
+              <div class="col-xs-10">
+                <p>You could show your savvy in areas that you are hooked on and inspire the rest of the world?</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row clearfix footer">
-        <div class="col-md-10">
-        <p class="text-center">
-          <em><a href="mailto:support@plottio.com">support@plottio.com</a></em>
-
-          <a href="https://twitter.com/plottio" target = "_blank"><img class="twitter" src="images/twitter.png" alt="twitter"></img></a>
-        </p>
+      <div class="row row-centered row2 icons">
+        <div class="col-sm-4 col-centered col-sm-offset-1">
+          <div class="item">
+            <img class="center-img" src="images/news.png" alt="news">
+            <div class="content">
+              <div class="col-xs-1">
+                <span class="glyphicon glyphicon-ok"></span>
+              </div>
+              <div class="col-xs-10">
+                You could read it as an online newspaper interconnected with anyone on the resource?
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-2 social">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Plottio.com - revolutionizing Journalism! Check it out:) #plottio" data-via="plottio" data-size="large" data-hashtags="social">Tweet</a>
-          <script>
-            !function(d,s,id){
-              var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-              if(!d.getElementById(id)){
-                js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js,fjs);
-              }
-            }(document, 'script', 'twitter-wjs');
-          </script>
-          <!-- <div class="fb-share-button fb" data-type="button_count" data-href="http://plottio.com" data-width="200"></div> -->
+        <div class="col-sm-4 col-centered col-sm-offset-2">
+          <div class="item">
+            <img class="center-img" src="images/cat_paper.png" alt="cat">
+            <div class="content">
+              <div class="col-xs-1">
+                <span class="glyphicon glyphicon-ok"></span>
+              </div>
+              <div class="col-xs-10">
+                <p>You would not have to stick to 140 characters limit? And share your full thought?</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="row row-centered pre-join">
+        <div class="col-sm-10 col-centered col-sm-offset-1">
+          <div class="item">
+            <div class="content hello">
+              <h2>Write, Read, Share, Connect and Inspire with ease.</h2>
+              <p class="explain">We are revolutionizing social journalism by empowering people to share their stories with the whole world.
+              Stories that are written by real people for real people with no media bias in between. Ideas that are connected in newspaper-like format and you are an essential part of it. We let you concentrate on the main thing – your thoughts.
+              Start plotting now and you might become our new star contributor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row clearfix">
+        <button id="join" class="btn btn-success btn-lg">Participate</button>
+      </div>
+      <!-- <div id="signup"> -->
+      <div id="signup" class="container">
+        <div class="row row-centered">
+          <div class="col-sm-8 col-centered col-sm-offset-2">
+            <div class="item">
+              <div class="content hello">
+                <h3>We are excited to see you on board!</h3>
+                We are pushing our limits to fulfill your expectations as soon as possible. In the meantime, you could enter your e-mail to get an exclusive early
+                access to Plottio!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-centered">
+          <div class="col-sm-10 col-centered col-sm-offset-1">
+            <div class="item">
+              <div class="content">
+                <h3 id="revo">You could be a part of Social Journalism Revolution!</h3>
+                <div class="input-group input-group-lg">
+                  <input type="email" class="form-control" placeholder="Your email" id="email" name="email">
+                  <span class="input-group-btn">
+                  <button id="submit" type="submit" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="right" title="Early Access">
+                  <span class="glyphicon glyphicon-saved"></span>&nbsp; Participate</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a id="id1"></a>
+      <div class="row row-centered footer">
+        <div class="col-sm-12 col-centered text-center">
+            <em><a href="mailto:support@plottio.com">support@plottio.com</a></em>
+            <button class="btn btn-xs btn-twitter"><i class="fa fa-twitter"></i><a href="http://twitter.com/plottio"> | Follow</a></button>
+        </div>
     </div>
     <script type="text/javascript" src="js/jquery2.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

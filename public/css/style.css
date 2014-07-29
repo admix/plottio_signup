@@ -97,7 +97,37 @@ button, input, .btn-sm {
   margin-bottom: 30px;
   background-color: #fff;
 }
-.btn-success, .btn-success:disabled, .btn-success:active, .btn-success:focus {
+.btn-success {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  opacity: 0.8;
+}
+.btn-success.disabled:hover,
+.btn-success.disabled:focus,
+.btn-success.disabled:active,
+.btn-success.disabled.active,
+.btn-success[disabled]:hover,
+.btn-success[disabled]:focus,
+.btn-success[disabled]:active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success:hover,
+fieldset[disabled] .btn-success:focus,
+fieldset[disabled] .btn-success:active,
+fieldset[disabled] .btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+/*.btn-success, .btn-success:disabled, .btn-success:active, .btn-success:focus, .btn-success:after {
   background-color: #1abc9c;
   border-color: #1abc9c;
 }
@@ -105,7 +135,7 @@ button, input, .btn-sm {
   background-color: #1abc9c;
   border-color: #1abc9c;
   opacity: 0.8;
-}
+}*/
 #pen img{
   width: 100%;
   height: auto;

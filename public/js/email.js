@@ -16,8 +16,16 @@ function sendEmail(user) {
       }
   });
 
+  var styles = '<style>.logo{margin-left: 10px;margin-right: 30px; padding: 0;vertical-align: middle;background-color: #1abc9c; height: 100px; font-size: 50px; color: #fff; font-family: sans-serif;text-align:center;}.body{ margin-left: 30px;margin-right: 30px;} .body p{ font-size: 14px; line-height: 1.6;}</style>',
+      logoHeader = '<div class="logo"><h1>Plottio</h1></div>',
+      emailHeader = '<div class="body"><h2>Here we meet again,</h2>',
+      emailStart = '<p>Plottio Team would like to thank you for the support of this Social Journalism Revolution.</p>',
+      emailBody = '<p>We know as a fact, that only together we can accomplish something as tremendous and we deeply value your contribution.  For us “Plotters” are unique social people, those who want to inspire and to progress while giving back their knowledge and motivation to others. An early access is just a small gift that will not suffice to express our gratitude. While we are working tirelessly on creating the finest experience, check out our twitter (link), and share the word with your social circle to help us achieve this aspiration.</p>',
+      emailEnd = '<p><em>P.S. Information on the website will be constantly updated to give you a "behind the scenes" insight on our progress, so feel free to check back anytime soon. Until next time.</em></p>',
+      emailBye = '<p>Yours truly,<p> <h2>Plottio Team</h2></div>';
 
-  var body = '<p>Here we meet again,<br><br>Plottio Team would like to thank you for the support of this Social Journalism Revolution.<br><br>We know as a fact, that only together we can accomplish something as tremendous and we deeply value your contribution. An early access is just a small gift that will not suffice to express our gratitude. While we are working tirelessly on creating the best experience, please share the word with your social circles to help us achieve this goal.<br><br>P.S. Information on the website will be constantly updated to give you a "behind the scenes" insight on our progress, so feel free to check back anytime soon. Until next time.<br><br>Yours truly,<br><br>Plottio Team</p>'
+  //var body = '<p>Here we meet again,<br><br>Plottio Team would like to thank you for the support of this Social Journalism Revolution.<br><br>We know as a fact, that only together we can accomplish something as tremendous and we deeply value your contribution. An early access is just a small gift that will not suffice to express our gratitude. While we are working tirelessly on creating the best experience, please share the word with your social circles to help us achieve this goal.<br><br>P.S. Information on the website will be constantly updated to give you a "behind the scenes" insight on our progress, so feel free to check back anytime soon. Until next time.<br><br>Yours truly,<br><br>Plottio Team</p>'
+  var body = styles + logoHeader + emailHeader + emailStart + emailBody + emailEnd + emailBye;
   // setup e-mail data with unicode symbols
   var mailOptions = {
       from: "✔ Plottio Team <support@gmail.com>", // sender address
