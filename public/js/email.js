@@ -31,6 +31,8 @@ function sendEmail(user) {
       from: "Plottio Team <support@gmail.com>", // sender address
       to: user, // list of receivers
       subject: "Welcome to Plottio", // Subject line
+      headers: {"mail-by":"plottio.com",
+                "signed-by":"plottio.com"},
       //text: "Hi there! ✔", // plaintext body
       html: body// html body
   }
