@@ -274,4 +274,7 @@ and (max-device-width : 568px) {
 .btn-twitter a:hover {
   text-decoration: none;
 }
+#revo {
+  text-align: center;
+}
 /****/
