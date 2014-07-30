@@ -26,9 +26,8 @@ function sendEmail(user) {
       emailBye = '<p>Yours truly,<p> <h2>Plottio Team</h2></div>',
       htmlEnd = '</body></html>';
 
-
   //var body = '<p>Here we meet again,<br><br>Plottio Team would like to thank you for the support of this Social Journalism Revolution.<br><br>We know as a fact, that only together we can accomplish something as tremendous and we deeply value your contribution. An early access is just a small gift that will not suffice to express our gratitude. While we are working tirelessly on creating the best experience, please share the word with your social circles to help us achieve this goal.<br><br>P.S. Information on the website will be constantly updated to give you a "behind the scenes" insight on our progress, so feel free to check back anytime soon. Until next time.<br><br>Yours truly,<br><br>Plottio Team</p>'
-  var body = htmlStat + styles + logoHeader + emailHeader + emailStart + emailBody + emailEnd + emailBye;
+  var body = htmlStart + styles + logoHeader + emailHeader + emailStart + emailBody + emailEnd + emailBye + htmlEnd;
 
   // setup e-mail data with unicode symbols
   var mailOptions = {

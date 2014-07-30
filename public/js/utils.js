@@ -8,9 +8,7 @@ $(document).ready(function() {
   // Submiting emails
   $("#submit").click(function(e) {
     e.preventDefault();
-    //console.log('submit clicked');
     var data = $("#email").val();
-    //console.log('data: ' + data);
     $.ajax({
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
