@@ -22,7 +22,7 @@ h4 {
   margin-right: 0;
 }
 .jumbotron {
-  background-color: #1abc9c;
+  background-color: rgba(26, 188, 156, 0.8);
   padding-bottom: 5px;
   margin-bottom: 0px;
   border-radius: 0px;
@@ -40,6 +40,10 @@ h4 {
 }
 .top {
   padding-top: 30px;
+}
+.top .column, .back {
+  background-image: url('../images/newspaper.jpg');
+  background-size: cover;
 }
 .bottom {
   margin: 0 auto;
@@ -100,6 +104,7 @@ button, input, .btn-sm {
 .btn-success {
   background-color: #1abc9c;
   border-color: #1abc9c;
+  opacity: 0.8;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -107,7 +112,7 @@ button, input, .btn-sm {
 .btn-success.active {
   background-color: #1abc9c;
   border-color: #1abc9c;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .btn-success.disabled:hover,
 .btn-success.disabled:focus,
