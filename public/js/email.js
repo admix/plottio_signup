@@ -15,7 +15,12 @@ function sendEmail(user) {
           pass: userpwd
       }
   });
-
+  transporter.use('stream', require('nodemailer-dkim').signer({
+      domainName: 'plottio.com',
+      keySelector: 'google',
+      privateKey: fs.readFileSync('privateDKIM.pem')
+  }));
+  
   var htmlStart = '<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width"><title>Plottio</title></head><body>',
       styles = '<style scoped>.logo{margin-left: 10px;margin-right: 30px; padding: 0;vertical-align: middle;background-color: #1abc9c; height: 100px; font-size: 50px; color: #fff; font-family: sans-serif;text-align:center;}.body{ margin-left: 30px;margin-right: 30px;} .body p{ font-size: 14px; line-height: 1.6;}</style>',
       logoHeader = '<div class="logo"><h1>Plottio</h1></div>',
