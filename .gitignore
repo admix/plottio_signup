@@ -3,7 +3,7 @@
 node_modules/
 bower_components/
 .env
-privateDKIM.pem
+private.pem
 
 # Compiled source #
 ###################
