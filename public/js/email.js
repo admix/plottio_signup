@@ -38,7 +38,7 @@ function sendEmail(user) {
 
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: "Plottio Team <support@plottio.com>", // sender address
+      from: "Plottio Team <alexander.snurnikov@plottio.com>", // sender address
       to: user, // list of receivers
       subject: "Welcome to Plottio", // Subject line
       headers: {"mailed-by":"plottio.com",
