@@ -282,4 +282,39 @@ and (max-device-width : 568px) {
 #revo {
   text-align: center;
 }
+.less-width {
+
+}
+.less-width .col-xs-2 {
+  width: 12%;
+  opacity: 0.8;
+}
+.less-width .col-sm-offset-4 {
+  margin-left: 32%;
+}
+.less-width img {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+.left {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.center {
+  border-bottom: 1px solid #000;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.right {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /****/
