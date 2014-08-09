@@ -38,9 +38,9 @@ h4 {
 #progr:hover {
   opacity: 0.8;
 }
-.top {
+/*.top {
   padding-top: 30px;
-}
+}*/
 .top .column, .back {
   background-image: url('../images/newspaper.jpg');
   background-size: cover;
@@ -217,7 +217,6 @@ and (max-device-width : 568px) {
   width: 100%;
 }
 .footer {
-  margin-top: 20px;
   margin-bottom: 0px;
   background-color: #000;
   height: 40px;
@@ -286,11 +285,10 @@ and (max-device-width : 568px) {
 
 }
 .less-width .col-xs-2 {
-  width: 12%;
+
   opacity: 0.8;
 }
 .less-width .col-sm-offset-4 {
-  margin-left: 32%;
 }
 .less-width img {
   margin-top: 10px;
@@ -299,22 +297,31 @@ and (max-device-width : 568px) {
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 }
+.social {
+  background-color: #1abc9c;
+  opacity: 0.8;
+  padding-bottom: 5px;
+}
+.social a:hover > img{
+  opacity: 0.9;
+  background-color: #00B2EE;
+}
 .left {
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-left: 2px solid #1abc9c;
   padding-left: 0px;
   padding-right: 0px;
+  padding-bottom: 1px;
 }
 .center {
-  border-bottom: 1px solid #000;
   padding-left: 0px;
   padding-right: 0px;
+  padding-bottom: 1px;
 }
 .right {
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+  border-right: 2px solid #1abc9c;
   padding-left: 0px;
   padding-right: 0px;
+  padding-bottom: 1px;
 }
 
 /****/
