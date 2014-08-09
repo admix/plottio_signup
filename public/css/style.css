@@ -41,6 +41,18 @@ h4 {
 /*.top {
   padding-top: 30px;
 }*/
+.head {
+  height: 30px;
+}
+.head img {
+  height: 100%;
+  width: auto;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  float: right;
+}
+}
 .top .column, .back {
   background-image: url('../images/newspaper.jpg');
   background-size: cover;
@@ -301,6 +313,11 @@ and (max-device-width : 568px) {
   background-color: #1abc9c;
   opacity: 0.8;
   padding-bottom: 5px;
+}
+.social img {
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
 }
 .social a:hover > img{
   opacity: 0.9;
