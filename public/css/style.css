@@ -313,6 +313,7 @@ and (max-device-width : 568px) {
   background-color: #1abc9c;
   opacity: 0.8;
   padding-bottom: 5px;
+  padding-top: 5px;
 }
 .social img {
   border-radius: 150px;
