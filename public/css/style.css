@@ -269,7 +269,7 @@ and (max-device-width : 568px) {
   margin: 0 auto;
 }
 .center-img2 {
-  width: 16%;
+  width: 35%;
   display: block;
   margin: 0 auto;
 }
@@ -327,6 +327,9 @@ and (max-device-width : 568px) {
 .social a:hover > img{
   opacity: 0.9;
   background-color: #236B8E;
+}
+.social .col-md-offset-5 {
+  margin-left: 37.66%;
 }
 .left {
   border-left: 2px solid #1abc9c;
