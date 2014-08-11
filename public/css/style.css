@@ -264,6 +264,11 @@ and (max-device-width : 568px) {
   margin-bottom: 20px;
 }
 .center-img {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+.center-img2 {
   width: 16%;
   display: block;
   margin: 0 auto;
