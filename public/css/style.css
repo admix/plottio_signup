@@ -229,12 +229,13 @@ and (max-device-width : 568px) {
 }
 .footer {
   margin-bottom: 0px;
-  background-color: #000;
   height: 40px;
   background-color: #ECF0F1;
   padding-top: 5px;
 }
-
+.footer a {
+  color: #1abc9c !important;
+}
 #logo a:link {
   color: #000;
 }
@@ -246,7 +247,7 @@ and (max-device-width : 568px) {
 }
 .explain {
   font-size: 16px;
-  text-align: left;
+  text-align: center;
 }
 .pre-join {
   margin-bottom: 30px;
@@ -263,7 +264,7 @@ and (max-device-width : 568px) {
   margin-bottom: 20px;
 }
 .center-img {
-  width: 25%;
+  width: 16%;
   display: block;
   margin: 0 auto;
 }
