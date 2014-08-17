@@ -355,6 +355,11 @@ and (max-device-width : 568px) {
   padding-right: 0px;
   padding-bottom: 1px;
 }
+
+.share {
+  padding: 1px;
+  width: 25px;
+}
 /*h1 a:hover {
   color: #236B8E !important;
 }*/
