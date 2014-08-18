@@ -256,7 +256,7 @@ and (max-device-width : 568px) {
   text-align: center;
 }
 .pre-join {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .icons {
   font-size: 16px;
@@ -360,6 +360,44 @@ and (max-device-width : 568px) {
   padding: 1px;
   width: 25px;
 }
+
+/* Social icons/buttons */
+.tw {
+  background-color: #4099FF;
+  border-color: #4099FF;
+}
+.tw:hover,
+.tw:focus,
+.tw:active {
+  background-color: #4099FF;
+  border-color: #4099FF;
+  opacity: 0.8;
+}
+.fb {
+  background-color: #3B5998;
+  border-color: #3B5998;
+}
+.fb:hover,
+.fb:focus,
+.fb:active {
+  background-color: #3B5998;
+  border-color: #3B5998;
+  opacity: 0.8;
+}
+.in {
+  background-color: #4875B4;
+  border-color: #4875B4;
+}
+.in:hover,
+.in:focus,
+.in:active {
+  background-color: #4875B4;
+  border-color: #4875B4;
+  opacity: 0.8;
+}
+
+/* End of social icons/buttons */
+
 /*h1 a:hover {
   color: #236B8E !important;
 }*/

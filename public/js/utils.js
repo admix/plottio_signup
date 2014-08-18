@@ -53,4 +53,14 @@ $(document).ready(function() {
     $(".progress").slideDown("slow");
     scrollToAnchor("id2");
   }
+
+  $("#tw-connect").click(function() {
+    window.open("http://twitter.com/plottio", '_blank');
+  });
+  $("#fb-connect").click(function() {
+    window.open("http://facebook.com/plottio", '_blank');
+  });
+  $("#in-connect").click(function() {
+    window.open("http://linkedin.com/plottio", '_blank');
+  });
 });
