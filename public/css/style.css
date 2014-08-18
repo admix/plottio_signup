@@ -384,18 +384,23 @@ and (max-device-width : 568px) {
   border-color: #3B5998;
   opacity: 0.8;
 }
-.in {
+.linkedin {
   background-color: #4875B4;
   border-color: #4875B4;
 }
-.in:hover,
-.in:focus,
-.in:active {
+.linkedin:hover,
+.linkedin:focus,
+.linkedin:active {
   background-color: #4875B4;
   border-color: #4875B4;
   opacity: 0.8;
 }
-
+.at4-share-title {
+  border-color: #1abc9c;
+  color: #fff;
+  background-color: #1abc9c !important;
+  text-align: center;
+}
 /* End of social icons/buttons */
 
 /*h1 a:hover {
