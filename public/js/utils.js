@@ -31,7 +31,7 @@ $(document).ready(function() {
     scrollToAnchor("id1");
     ga('send', 'event', 'Clicks', 'Participate_button', 'Participate');
   });
-  
+
   function processSuccess(data) {
     console.log(data.res);
     if(data.res == "already used") {
@@ -43,6 +43,7 @@ $(document).ready(function() {
       $("#submit").attr("disabled", true);
       $("#revo").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
       openProgress();
+      ga('send', 'event', 'Signup', 'Signup Button', 'Signup');
     }
   }
 
@@ -57,12 +58,15 @@ $(document).ready(function() {
   }
 
   $("#tw-connect").click(function() {
+    ga('send', 'event', 'Social_Connect', 'Twitter connect', 'Twitter');
     window.open("http://twitter.com/plottio", '_blank');
   });
   $("#fb-connect").click(function() {
+    ga('send', 'event', 'Social_Connect', 'Facebook connect', 'Facebook');
     window.open("http://facebook.com/plottio", '_blank');
   });
   $("#in-connect").click(function() {
+    ga('send', 'event', 'Social_Connect', 'Linkedin connect', 'Linkedin');
     window.open("http://linkedin.com/plottio", '_blank');
   });
 });
