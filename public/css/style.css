@@ -2,11 +2,11 @@ body {
   background-color: #fff;
 }
 h1 a{
-  font-size: 120px !important;
+  /*font-size: 120px !important;
   color: #fff !important;
   letter-spacing: 3px;
   margin-bottom: -10px;
-  width: inherit;
+  width: inherit;*/
 }
 h1 a:hover {
   text-decoration: none;
@@ -17,6 +17,10 @@ h4 {
   letter-spacing: 0.5px;
   margin-bottom: -10px;
 }
+#logo_plottio {
+  width: 50%;
+  height: auto;
+}
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -26,6 +30,7 @@ h4 {
   padding-bottom: 5px;
   margin-bottom: 0px;
   border-radius: 0px;
+  padding-top: 20px;
 }
 .progress {
   display: none;
@@ -39,9 +44,9 @@ h4 {
 #progr:hover {
   opacity: 0.8;
 }
-/*.top {
+.top {
   padding-top: 30px;
-}*/
+}
 .head {
   height: 30px;
 }
@@ -69,7 +74,7 @@ h4 {
   width: 24%;
 }
 .top .jumbotron {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   border-radius: 0px;
   width: 100%;
 }
@@ -181,45 +186,21 @@ fieldset[disabled] .btn-success.active,
   }
 }
 */
-@media
-and (min-width : 420px) {
-  body {
-    color: red !important;
-  }
-}
-/*@media (min-device-width: 700px) {
-  .social .col-sm-offset-4 {
-    margin-left: 37.66%;
-  }
-}*/
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
+
+@media (max-width: 600px){
   /*body {
     color: red;
   }*/
-  .container {
+  /*.container {
     width: 120%;
-  }
-  .container .container {
+  }*/
+  /*.container .container {
     width: 100%;
-  }
-  /*.input-group{
-    width: 90%;
-  }
-  .bottom .col-md-8, #signup .col-md-12 {
-    width: 90%;
-  }
-  .bottom .col-md-4 {
-    width: 70%;
-  }
-  #signup .col-md-4 {
-    width: 90%;
+  }*/
+  #logo_plottio {
+    width: 80% !important;
     height: auto;
   }
-  .jumbotron {
-    width: 130%;
-  }*/
 }
 .twitter {
   height: 28px;

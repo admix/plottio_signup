@@ -7,6 +7,9 @@ module.exports = exports = function(app, db) {
       res.render("index.html");
     });
 
+    app.get('*', function(res, req, next) {
+      res.render("404.html");
+    });
     // Welcome page
     //app.get("/welcome", sessionHandler.displayWelcomePage);
 
