@@ -5,103 +5,161 @@
     <meta name="viewport" content="width=device-width">
     <title>Plottio</title>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/social-buttons.css" rel="stylesheet"/>
+    <link href="css/style.less" rel="stylesheet/less" type="text/css"/>
+    <link href="css/style_test.less" rel="stylesheet/less" type="text/css"/>
+    <link rel="icon" type="image/png" href="images/p_plottio.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/google_analytics.js"></script>
+    <script type="text/javascript" src="js/less.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=176425879108666&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
     <div class="container">
       <div class="row clearfix top">
-        <div class="col-md-12 column">
+        <div class="col-sm-10 column">
           <div class="jumbotron">
-            <h1 id="logo" class="text-center"><a href="http://plottio.com">Plottio</a></h1>
-            <h4 class="text-center"><em>Reinventing Journalism...</em></h4>
-            <h4 class="text-center"><em>comming soon...</em></h4>
+            <h1 id="logo" class="text-center"><a href="http://plottio.com"><img id="logo_plottio" src="images/plottio_main.png" alt="plottio"></a></h1>
+            <h4 class="text-center"><em>Reinventing Journalism</em></h4>
             <br>
-            <div class="progress">
-              <div id="progr" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
-                15%
-              </div>
-            </div>
           </div>
         </div>
       </div>
-      <div class="row clearfix bottom">
-        <div class="col-md-12">
-          <h2>Hi there!</h2>
-          <h3>Wouldn’t it be great if:</h3>
-          <ul class="list-group">
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could read/write articles that are created by fellow users in real-time without media bias in between?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could show your savvy in areas that you are hooked on and inspire the rest of the world?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You could read it as an online newspaper interconnected with anyone on the resource?</li>
-            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;You would not have to stick to 140 characters limit?</li>
-          </ul>
-          </p>
+      <div class="row hello">
+        <div class="col-sm-6 col-centered col-sm-offset-3">
+            <div class="content">
+              JUST IMAGINE
+            </div>
         </div>
       </div>
-      <div class="row clearfix">
+      <div class="row middle" style="margin-left: 15px; margin-right: 15px; margin-top: 45px;">
+        <div class="col-sm-3">
+            <img class="center-img" src="images/icons/icon_write_grey.png" alt="write">
+            <div class="content">
+                <p>
+                  You could read/write articles that are created by fellow users in real-time without media bias in between
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <img class="center-img" src="images/icons/icon_inspire_grey.png" alt="inspire">
+            <div class="content">
+                <p>
+                  You could show your savvy in areas that you are hooked on and inspire the rest of the world
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <img class="center-img" src="images/icons/icon_connect_grey.png" alt="connect">
+            <div class="content">
+                <!-- <p>
+                  You could read it as an online newspaper and be easily interconnected with anyone on the resource
+                </p> -->
+                <p>
+                  You could be easily interconnected with anyone on the resource and read it as an online newspaper
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <img class="center-img" src="images/icons/icon_140_grey.png" alt="140">
+            <div class="content">
+                <p>
+                  You would not have to stick to 140 characters limit while composing your story
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="row row-centered pre-join hello">
+        <div class="row">
+        <div class="col-sm-12">
+            <div class="content">
+              WRITE, READ, SHARE, CONNECT AND INSPIRE WITH EASE
+              <p class="explain">We are revolutionizing social journalism by empowering people to share their stories with the whole world.
+                Stories that are written by real people for real people with no media bias in between. Ideas that are connected in newspaper-like format and you are an essential part of it. We let you concentrate on the main thing – your thoughts.
+                Start plotting now and you might become our new star contributor.
+              </p>
+            </div>
+        </div>
+      </div>
+        <div class="row clearfix content">
+          <button id="join" class="btn btn-success btn-lg" style="background-color: #fff; color: #1abc9c; margin-top: 40px;">CLICK TO PARTICIPATE</button>
+        </div>
+      </div>
+      <!-- <div class="row clearfix">
         <button id="join" class="btn btn-success btn-lg">Participate</button>
-      </div>
-      <div id="signup">
-        <div class="row clearfix bottom">
-          <div class="col-md-8">
-            <div class="jumbotron about">
-              <h3>Write, Read, Share, Connect and Inspire with ease.</h3>
-              &nbsp;We are revolutionizing social journalism by empowering people to share their stories with the whole world.  Stories that are written by real people for real people with no media bias in between. Ideas that are connected in newspaper-like format and you are an essential part of it. We let you concentrate on the main thing – your thoughts.
-              <br>Start plotting now and you might become our new star contributor.
+      </div> -->
+      <!-- <div id="signup"> -->
+      <div id="signup" class="container">
+        <div class="row row-centered hello">
+          <div class="col-sm-8 col-centered col-sm-offset-2">
+            <div class="item">
+              <div class="content">
+                WE ARE EXCITED TO SEE YOU ON BOARD!
+                <p class="explain" style="text-align: center;">
+                  We are pushing our limits to fulfill your expectations as soon as possible. In the meantime, you could enter your e-mail to get an exclusive early
+                  access to Plottio!
+                </p>
+              </div>
             </div>
           </div>
-          <div id="pen" class="col-md-4">
-            <img src="images/pen.jpg" alt="pen">
-          </div>
         </div>
-        <div class="row clearfix signup">
-          <div class="col-md-12">
-            <div class="jumbotron">
-              <h3 id="revo">You could be a part of Social Journalism Revolution!</h3>
-              <div class="input-group input-group-lg">
-                <input type="email" class="form-control" placeholder="Your email" id="email" name="email">
-                <span class="input-group-btn">
-                <button id="submit" type="submit" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="right" title="Early Access">
-                <span class="glyphicon glyphicon-saved"></span>&nbsp; Join</button>
-                </span>
-                <a name="id1"/>
+        <hr/>
+        <div class="row row-centered">
+          <div class="col-sm-10 col-centered col-sm-offset-1">
+            <div class="item">
+              <div class="content">
+                <h3 id="revo">Become a part of our Social Journalism Revolution!</h3>
+                <div class="input-group input-group-lg">
+                  <input type="email" class="form-control" placeholder="Your email" id="email" name="email">
+                  <span class="input-group-btn">
+                  <button id="submit" type="submit" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="right" title="Early Access">
+                  <i class="fa fa-hand-o-right"></i>&nbsp; Participate</button>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row clearfix footer">
-        <div class="col-md-10">
-        <p class="text-center">
-          <em><a href="mailto:support@plottio.com">support@plottio.com</a></em>
-
-          <a href="https://twitter.com/plottio" target = "_blank"><img class="twitter" src="images/twitter.png" alt="twitter"></img></a>
-        </p>
+      <a id="id1"></a>
+      <br/>
+      <!-- <div class="row row-centered hello" style="margin-top: 0px; margin-bottom: 5px;">
+        <div class="col-sm-8 col-centered col-sm-offset-2">
+          <div class="item">
+            <div class="content">
+              WE ARE PREPARING SOMETHING REALLY SPECIAL!
+            </div>
+          </div>
         </div>
-        <div class="col-md-2 social">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Plottio.com - revolutionizing Journalism! Check it out:) #plottio" data-via="plottio" data-size="large" data-hashtags="social">Tweet</a>
-          <script>
-            !function(d,s,id){
-              var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-              if(!d.getElementById(id)){
-                js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js,fjs);
-              }
-            }(document, 'script', 'twitter-wjs');
-          </script>
-          <!-- <div class="fb-share-button fb" data-type="button_count" data-href="http://plottio.com" data-width="200"></div> -->
+      </div> -->
+      <div class="progress">
+        <div id="progr" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+          15%
+        </div>
+      </div>
+      <a id="id2"></a>
+      <div class="row row-centered footer">
+        <div class="col-sm-12 col-centered text-center">
+          <em><a href="mailto:support@plottio.com"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;&nbsp;info@plottio.com</a></em>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+              <button id="tw-connect" type="button" class="btn btn-success btn-lg share tw"><i class="fa fa-twitter"></i></button>
+              <button id="fb-connect" type="button" class="btn btn-success btn-lg share fb"><i class="fa fa-facebook"></i></button>
+              <button id="in-connect" type="button" class="btn btn-success btn-lg share linkedin"><i class="fa fa-linkedin"></i></button>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      var addthis_share =
+        {
+        templates: {
+          twitter: 'Social Journalism Revolution has been started by @plottio. I am a Supporter. Are you? http://plottio.com',
+          facebook: 'Social Journalism Revolution has started. I am a Supporter. Are you? http://plottio.com',
+          linkedin: 'Social Journalism Revolution has been started by @plottio. I am a Supporter. Are you? http://plottio.com'
+        }
+      }
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52efa6027d2186a4"></script>
     <script type="text/javascript" src="js/jquery2.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
