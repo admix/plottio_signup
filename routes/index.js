@@ -7,9 +7,16 @@ module.exports = exports = function(app, db) {
       res.render("index.html");
     });
 
-    app.get('*', function(res, req, next) {
+    // Page for pre-production testing
+    app.get('/test', function(req, res) {
+      res.render("test.html");
+    });
+
+    // Rendering other requests as 404
+    app.get('*', function(req, res) {
       res.render("404.html");
     });
+
     // Welcome page
     //app.get("/welcome", sessionHandler.displayWelcomePage);
 

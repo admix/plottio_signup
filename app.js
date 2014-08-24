@@ -35,7 +35,7 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
   app.engine('html', cons.swig);
   app.set('view engine', 'html');
   app.use(express.static(__dirname + '/views'));
-
+  app.engine('html', require('ejs').renderFile);
   // Express middleware to populate 'req.cookies' so we can access cookies
   app.use(express.cookieParser());
 
@@ -45,13 +45,16 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
   app.use(express.urlencoded());
 
   app.use(express.static(__dirname + "/public"));
+
+  // Application routes
+
+  routes(app, db);
+
   app.use(function(err, req, res, next) {
     // if error occurs
     res.send(500, { error: 'Sorry something bad happened!' });
   });
 
-  // Application routes
-  routes(app, db);
 
   app.post('/', function(req, res) {
     res.setHeader('Content-Type', 'application/json');
