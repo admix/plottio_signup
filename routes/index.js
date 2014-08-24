@@ -8,9 +8,9 @@ module.exports = exports = function(app, db) {
     });
 
     // Page for pre-production testing
-    app.get('/test', function(req, res) {
-      res.render("test.html");
-    });
+    // app.get('/test', function(req, res) {
+    //   res.render("test.html");
+    // });
 
     // Rendering other requests as 404
     app.get('*', function(req, res) {

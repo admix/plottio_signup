@@ -63,10 +63,10 @@ $(document).ready(function() {
   });
   $("#fb-connect").click(function() {
     ga('send', 'event', 'Social_Connect', 'Facebook connect', 'Facebook');
-    window.open("http://facebook.com/plottio", '_blank');
+    window.open("https://www.facebook.com/pages/Plottio/837077572989391?sk=timeline", '_blank');
   });
   $("#in-connect").click(function() {
     ga('send', 'event', 'Social_Connect', 'Linkedin connect', 'Linkedin');
-    window.open("http://linkedin.com/plottio", '_blank');
+    //window.open("#", '_blank');
   });
 });
