@@ -7,6 +7,11 @@ module.exports = exports = function(app, db) {
       res.render("index.html");
     });
 
+    // Page for Privacy Policy
+    app.get('/policy', function(req, res) {
+      res.render("policy.html");
+    });
+
     // Page for pre-production testing
     // app.get('/test', function(req, res) {
     //   res.render("test.html");

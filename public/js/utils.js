@@ -42,7 +42,7 @@ $(document).ready(function() {
       $("#email").val("Thank you");
       $("#submit").attr("disabled", true);
       $("#revo").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
-      openProgress();
+      //openProgress();
       ga('send', 'event', 'Signup', 'Signup Button', 'Signup');
     }
   }
