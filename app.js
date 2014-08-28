@@ -1,3 +1,5 @@
+require('newrelic');
+
 var http = require("http"),
     express = require("express"),
     MongoClient = require("mongodb").MongoClient,
