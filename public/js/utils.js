@@ -29,7 +29,7 @@ $(document).ready(function() {
     $("#join").slideUp();
     $("#signup").slideDown("slow");
     scrollToAnchor("id1");
-    ga('send', 'event', 'Clicks', 'Participate_button', 'Participate');
+    ga('send', 'event', 'SlideDown', 'Participate_button', 'Participate');
   });
 
   function processSuccess(data) {
