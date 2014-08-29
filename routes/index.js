@@ -5,7 +5,7 @@ module.exports = exports = function(app, db) {
     // Redirection from www to non-www
     app.get('/*', function(req, res, next) {
       if (req.headers.host.match(/^www/) !== null ) {
-        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url,301);
       } else {
         next();
       }
@@ -13,7 +13,7 @@ module.exports = exports = function(app, db) {
     // Home page
     app.get('/', function(res, req, next) {
       if (req.headers.host.match(/^www/) !== null ) {
-        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url,301);
       } else {
         res.render("index.html");
       }
