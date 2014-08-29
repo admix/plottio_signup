@@ -2,6 +2,14 @@ var ErrorHandler = require('./error').errorHandler;
 var dba = require('../public/js/db');
 module.exports = exports = function(app, db) {
 
+    // Redirection from www to non-www
+    app.get('/*', function(req, res, next) {
+      if (req.headers.host.match(/^www/) !== null ) {
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+      } else {
+        next();
+      }
+    })
     // Home page
     app.get('/', function(res, req, next) {
       res.render("index.html");
