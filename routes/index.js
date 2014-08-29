@@ -12,7 +12,11 @@ module.exports = exports = function(app, db) {
     })
     // Home page
     app.get('/', function(res, req, next) {
-      res.render("index.html");
+      if (req.headers.host.match(/^www/) !== null ) {
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+      } else {
+        res.render("index.html");
+      }
     });
 
     // Page for Privacy Policy
