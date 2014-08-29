@@ -229,7 +229,9 @@ fieldset[disabled] .btn-success.active,
 .justify-mobile {
   text-align: center;
 }
-
+.share-mobile {
+  display: none;
+}
 @media (max-width: 600px){
   .pre-join, .pad-mobile {
     padding-left: 20px;
@@ -255,5 +257,12 @@ fieldset[disabled] .btn-success.active,
   .pull-right {
     float: none !important;
     padding-left: 25px;
+  }
+  .share-mobile {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .share-mobile a{
+    color: @white;
   }
 }

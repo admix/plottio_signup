@@ -69,4 +69,12 @@ $(document).ready(function() {
     ga('send', 'event', 'Social_Connect', 'Linkedin connect', 'Linkedin');
     //window.open("#", '_blank');
   });
+  $("#tw-mobile").click(function() {
+    ga('send', 'event', 'Twitter_mobile_share', 'Twitter share', 'Twitter');
+    window.open("https://twitter.com/home?status=Social%20Journalism%20Revolution%20has%20been%20started%20by%20@plottio.%20I%20am%20a%20Supporter.%20Are%20you?%20http://plottio.com%20%23startup", '_blank');
+  });
+  $("#fb-mobile").click(function() {
+    ga('send', 'event', 'Facebook_mobile_share', 'Facebook share', 'Facebook');
+    window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fplottio.com", '_blank');
+  });
 });
