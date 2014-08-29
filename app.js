@@ -46,6 +46,16 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
   app.use(express.json());
   app.use(express.urlencoded());
 
+  app.use(function(req,res,next){
+    if(req.headers.host=="www.plottio.com"){
+      res.writeHead(301, {'Location':'http://plottio.com', 'Expires': (new Date).toGMTString()});
+      res.end();
+    }
+    else{
+      next();
+    }
+  });
+
   app.use(express.static(__dirname + "/public"));
 
   // Application routes
