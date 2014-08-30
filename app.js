@@ -50,16 +50,19 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
 
   // Application routes
 
-  routes(app, db);
+  // function removeWWW(req, res, next){
+  //   console.log("Doing redirection!");
+  //   if (req.headers.host.match(/^www/) !== null ) {
+  //     console.log("www");
+  //     res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  //   } else {
+  //     console.log("next");
+  //     next();
+  //   }
+  // }
+  // app.use(removeWWW);
 
-  function removeWWW(req, res, next){
-    if (req.headers.host.match(/^www/) !== null ) {
-        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
-    } else {
-        next();     
-    }
-  }
-  app.use(removeWWW);
+  routes(app, db);
 
   app.use(function(err, req, res, next) {
     // if error occurs
