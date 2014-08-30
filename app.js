@@ -52,6 +52,15 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
 
   routes(app, db);
 
+  function removeWWW(req, res, next){
+    if (req.headers.host.match(/^www/) !== null ) {
+        res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
+    } else {
+        next();     
+    }
+  }
+  app.use(removeWWW);
+
   app.use(function(err, req, res, next) {
     // if error occurs
     res.send(500, { error: 'Sorry something bad happened!' });

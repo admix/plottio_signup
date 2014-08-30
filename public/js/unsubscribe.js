@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var localhost = 'http://localhost:8080/unsubscribe',
-      plottio = 'http://plottio.com/unsubscribe';
+      plottio = 'https://plottio.com/unsubscribe';
 
   $("#unsubscribe").click(function(e) {
     e.preventDefault();
