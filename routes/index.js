@@ -23,6 +23,10 @@ module.exports = exports = function(app, db) {
     app.get('/unsubscribe', function(req, res) {
       res.render("unsubscribe.html");
     });
+    // Page for Blog
+    app.get('/blog', function(req, res) {
+      res.render("blog.html");
+    });
     // Unsubscribe from Plottio POST
     app.post('/unsubscribe', function(req, res) {
       res.setHeader('Content-Type', 'application/json');
