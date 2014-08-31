@@ -5,23 +5,47 @@ $(document).ready(function() {
   //URLs for dev
   var localhost = 'http://localhost:8080/',
       plottio = 'http://plottio.com/';
+  var signedUp = false;  //flage to check if email has been submited
 
-  // Submiting emails
-  $("#submit").click(function(e) {
+  // Submiting emails Top Page
+  $("#submitUp").click(function(e) {
     e.preventDefault();
-    var data = $("#email").val();
+    var data = $("#up").val();
     $.ajax({
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
       url: plottio,
       success: function(data) {
-        processSuccess(data);
+        processSuccess(data, "#up");
       },
       error  : function() {
         console.log('error');
       }
     });
+  });
+
+  // Submiting emails Bottom Page
+  $("#submitDown").click(function(e) {
+    e.preventDefault();
+    if(signedUp == false) {
+      var data = $("#down").val();
+      $.ajax({
+        type: 'POST',
+        data: JSON.stringify({"email": data}),
+        contentType: 'application/json',
+        url: localhost,
+        success: function(data) {
+          processSuccess(data, "#down");
+        },
+        error  : function() {
+          console.log('error');
+        }
+      });
+    } else {
+
+    }
+
   });
 
   $("#join").click(function(e) {
@@ -32,16 +56,20 @@ $(document).ready(function() {
     ga('send', 'event', 'SlideDown', 'Participate_button', 'Participate');
   });
 
-  function processSuccess(data) {
+  function processSuccess(data, upDown) {
     console.log(data.res);
     if(data.res == "already used") {
-      $("#email").val(data.email + " - already used");
+      $(upDown).val(data.email + " - already used");
     } else if(data.res == "bad email"){
-      $("#email").val("bad email");
+      $(upDown).val("bad email");
     } else {
-      $("#email").val("Thank you");
-      $("#submit").attr("disabled", true);
-      $("#revo").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
+      signedUp = true;
+      $("#up").val("Thank you");
+      $("#down").val("Thank you");
+      $("#submitUp").attr("disabled", true);
+      $("#submitDown").attr("disabled", true);
+      $("#revoUp").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
+      $("#revoDown").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
       //openProgress();
       ga('send', 'event', 'Signup', 'Signup Button', 'Signup');
     }
@@ -57,6 +85,7 @@ $(document).ready(function() {
     scrollToAnchor("id2");
   }
 
+  // Google Analytics Intelligent Events
   $("#tw-connect").click(function() {
     ga('send', 'event', 'Social_Connect', 'Twitter connect', 'Twitter');
     window.open("http://twitter.com/plottio", '_blank');
