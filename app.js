@@ -11,6 +11,7 @@ var http = require("http"),
     swig = require("swig"),
     validator = require("validator"),
     dba = require('./public/js/db'),
+    compression = require('compression'),
     sendEmail = require('./public/js/email');
 
 habitat.load();
@@ -36,6 +37,7 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
   // Register our templating engine
   app.engine('html', cons.swig);
   app.set('view engine', 'html');
+  app.use(compression()); //use compression
   app.use(express.static(__dirname + '/views'));
   app.engine('html', require('ejs').renderFile);
   // Express middleware to populate 'req.cookies' so we can access cookies
