@@ -3,7 +3,7 @@
 @white: #fff;
 @footer: #ECF0F1;
 @dark_grey: #333333;
-@twitter: #4099FF;
+@tw-mobileitter: #4099FF;
 @facebook: #3B5998;
 @linkedin: #4875B4;
 
@@ -14,6 +14,13 @@
 hr {
   border-color: @main_color_green !important;
   border-width: 20px;
+}
+.profile-pic {
+  width: 10%;
+  height: auto;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
 }
 .blog-date a {
   color: @white;
@@ -41,6 +48,13 @@ hr {
   font-size: 10px;
   text-align: left;
   letter-spacing: 0.6px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.blog-date .profile {
+  text-align: right;
+  font-size: 12px;
 }
 .blog-post {
   margin-top: 0px;
@@ -58,3 +72,35 @@ hr {
   width: 100%;
   height: auto;
 }
+
+
+/* Social icons/buttons */
+#tw-mobile {
+  background-color: @tw-mobileitter;
+  border-color: @tw-mobileitter;
+}
+#tw-mobile:hover,
+#tw-mobile:focus,
+#tw-mobile:active {
+  background-color: @tw-mobileitter;
+  border-color: @tw-mobileitter;
+  opacity: 0.8;
+}
+#fb-mobile {
+  background-color: @facebook;
+  border-color: @facebook;
+}
+#fb-mobile:hover,
+#fb-mobile:focus,
+#fb-mobile:active {
+  background-color: @facebook;
+  border-color: @facebook;
+  opacity: 0.8;
+}
+.at4-share-title {
+  border-color: @main_color_green;
+  color: @white;
+  background-color: @main_color_green !important;
+  text-align: center;
+}
+/* End of social icons/buttons */
