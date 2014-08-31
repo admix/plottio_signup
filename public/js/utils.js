@@ -100,7 +100,7 @@ $(document).ready(function() {
   });
   $("#tw-mobile").click(function() {
     ga('send', 'event', 'Twitter_mobile_share', 'Twitter share', 'Twitter');
-    window.open("https://twitter.com/home?status=Social%20Journalism%20Revolution%20has%20been%20started%20by%20@plottio.%20I%20am%20a%20Supporter.%20Are%20you?%20http://plottio.com%20%23startup", '_blank');
+    window.open("http://twitter.com/intent/tweet?text=Social+Journalism+Revolution+has+been+started+by+@plottio.+I+am+a+Supporter.+Are+you%3F+&url=http%3A//plottio.com", "_blank");
   });
   $("#fb-mobile").click(function() {
     ga('send', 'event', 'Facebook_mobile_share', 'Facebook share', 'Facebook');
