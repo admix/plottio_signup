@@ -56,6 +56,11 @@ $(document).ready(function() {
     ga('send', 'event', 'SlideDown', 'Participate_button', 'Participate');
   });
 
+  $("#blog").click(function(e) {
+    e.preventDefault();
+    window.open("http://blog.plottio.com", "_blank");
+  });
+  
   function processSuccess(data, upDown) {
     console.log(data.res);
     if(data.res == "already used") {
