@@ -25,7 +25,8 @@ module.exports = exports = function(app, db) {
     });
     // Page for Blog
     app.get('/blog', function(req, res) {
-      res.render("blog.html");
+      //res.render("blog.html");
+      res.redirect(301, 'http://blog.plottio.com');
     });
     // Unsubscribe from Plottio POST
     app.post('/unsubscribe', function(req, res) {
