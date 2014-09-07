@@ -34,7 +34,7 @@ $(document).ready(function() {
         type: 'POST',
         data: JSON.stringify({"email": data}),
         contentType: 'application/json',
-        url: localhost,
+        url: plottio,
         success: function(data) {
           processSuccess(data, "#down");
         },
@@ -60,7 +60,7 @@ $(document).ready(function() {
     e.preventDefault();
     window.open("http://blog.plottio.com", "_blank");
   });
-  
+
   function processSuccess(data, upDown) {
     console.log(data.res);
     if(data.res == "already used") {
