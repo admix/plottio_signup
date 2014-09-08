@@ -58,6 +58,7 @@ $(document).ready(function() {
 
   $("#blog").click(function(e) {
     e.preventDefault();
+    ga('send', 'event', 'PlottioSocial', 'Go to PlottioSocial', 'PlottioSocial');
     window.open("http://blog.plottio.com", "_blank");
   });
 
