@@ -1,0 +1,265 @@
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.8;
+}
+h1 {
+  font-size: 30px !important;
+}
+h1 a:hover {
+  text-decoration: none;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  margin-bottom: -10px;
+}
+#logo_plottio {
+  width: 50%;
+  height: auto;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.jumbotron {
+  background-color: #1abc9c;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  padding-top: 20px;
+}
+.progress {
+  display: none;
+  border-radius: 0px;
+  width: 50%;
+  margin: 0 auto;
+}
+.progress-bar {
+  background-color: #e54850;
+}
+#progr:hover {
+  opacity: 0.8;
+}
+.top {
+  padding-top: 30px;
+}
+.bottom {
+  margin: 0 auto;
+  width: 90%;
+}
+.top .jumbotron {
+  padding-bottom: 20px;
+  border-radius: 0px;
+  width: 100%;
+}
+.container,
+.column {
+  width: 100%;
+  padding: 0px;
+  border-radius: none;
+}
+button,
+input,
+.btn-sm {
+  border-radius: 0px !important;
+}
+.btn-success {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  opacity: 0.8;
+}
+.btn-success.disabled:hover,
+.btn-success.disabled:focus,
+.btn-success.disabled:active,
+.btn-success.disabled.active,
+.btn-success[disabled]:hover,
+.btn-success[disabled]:focus,
+.btn-success[disabled]:active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success:hover,
+fieldset[disabled] .btn-success:focus,
+fieldset[disabled] .btn-success:active,
+fieldset[disabled] .btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+#signup .jumbotron,
+#join {
+  width: 100%;
+}
+.footer {
+  margin-bottom: 0px;
+  height: 40px;
+  background-color: #ecf0f1;
+  padding-top: 5px;
+  font-size: 12px;
+}
+.footer a {
+  color: #1abc9c !important;
+}
+.footer em {
+  vertical-align: middle;
+}
+.pull-right {
+  margin-top: 3px;
+}
+.center-img {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+.share {
+  padding: 1px;
+  width: 25px;
+}
+/* Social icons/buttons */
+.tw {
+  background-color: #4099ff;
+  border-color: #4099ff;
+}
+.tw:hover,
+.tw:focus,
+.tw:active {
+  background-color: #4099ff;
+  border-color: #4099ff;
+  opacity: 0.8;
+}
+.fb {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.fb:hover,
+.fb:focus,
+.fb:active {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  opacity: 0.8;
+}
+.linkedin {
+  background-color: #4875b4;
+  border-color: #4875b4;
+}
+.linkedin:hover,
+.linkedin:focus,
+.linkedin:active {
+  background-color: #4875b4;
+  border-color: #4875b4;
+  opacity: 0.8;
+}
+.at4-share-title {
+  border-color: #1abc9c;
+  color: #ffffff;
+  background-color: #1abc9c !important;
+  text-align: center;
+}
+/* End of social icons/buttons */
+.content {
+  display: block;
+  margin: 0 auto;
+}
+.middle {
+  font-size: 18px;
+  text-align: justify;
+  font-weight: 300;
+}
+.middle .content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 75%;
+}
+.hello {
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.pre-join {
+  background-color: #1abc9c;
+  color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 0px;
+}
+.explain {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  margin-top: 50px;
+  font-weight: 300;
+  text-align: justify;
+}
+#revoUp,
+#revoDown {
+  text-align: center;
+  font-size: 25px;
+}
+#submit {
+  font-weight: 300;
+}
+.form-control:focus {
+  border-color: #1abc9c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(26, 188, 156, 0.6);
+}
+.justify-mobile {
+  text-align: center;
+}
+.share-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .pre-join,
+  .pad-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .justify-mobile {
+    text-align: justify;
+  }
+  .hello {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  #logo_plottio {
+    width: 80% !important;
+    height: auto;
+  }
+  .footer {
+    margin-bottom: 0px;
+    height: 60px;
+  }
+  .pull-right {
+    float: none !important;
+    padding-left: 25px;
+  }
+  .share-mobile {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .share-mobile a {
+    color: #ffffff;
+  }
+  .col-mobile {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

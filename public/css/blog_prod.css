@@ -1,0 +1,93 @@
+#logo_plottio {
+  width: 20%;
+  height: auto;
+}
+hr {
+  border-color: #1abc9c !important;
+  border-width: 20px;
+}
+.profile-pic {
+  width: 10%;
+  height: auto;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.blog-date a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.blog-date a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.blog {
+  color: #ffffff;
+  font-size: 50px;
+}
+.hello {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.blog-header {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.blog-date {
+  font-size: 10px;
+  text-align: left;
+  letter-spacing: 0.6px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.blog-date .profile {
+  text-align: right;
+  font-size: 12px;
+}
+.blog-post {
+  margin-top: 0px;
+}
+.blog-post p {
+  font-size: 20px;
+  text-align: left;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
+  font-weight: 200;
+}
+.blog-photo {
+  width: 100%;
+  height: auto;
+}
+.crossed {
+  text-decoration: line-through;
+}
+/* Social icons/buttons */
+#tw-share {
+  background-color: #4099ff;
+  border-color: #4099ff;
+}
+#tw-share:hover,
+#tw-share:focus,
+#tw-share:active {
+  background-color: #4099ff;
+  border-color: #4099ff;
+  opacity: 0.8;
+}
+#fb-share {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+#fb-share:hover,
+#fb-share:focus,
+#fb-share:active {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  opacity: 0.8;
+}
+.at4-share-title {
+  border-color: #1abc9c;
+  color: #ffffff;
+  background-color: #1abc9c !important;
+  text-align: center;
+}
+/* End of social icons/buttons */
