@@ -266,4 +266,10 @@ fieldset[disabled] .btn-success.active,
     padding-left: 0px;
     padding-right: 0px;
   }
+  .why-mobile {
+    display: none;
+  }
+  .centr {
+    text-align: center;
+  }
 }
