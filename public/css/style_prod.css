@@ -223,6 +223,9 @@ fieldset[disabled] .btn-success.active,
 .share-mobile {
   display: none;
 }
+.why {
+  display: block;
+}
 @media (max-width: 600px) {
   .pre-join,
   .pad-mobile {
@@ -261,5 +264,8 @@ fieldset[disabled] .btn-success.active,
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .why {
+    display: inline-block;
   }
 }
