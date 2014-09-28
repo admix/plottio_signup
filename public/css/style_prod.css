@@ -226,6 +226,9 @@ fieldset[disabled] .btn-success.active,
 .why {
   display: block;
 }
+.divider {
+  display: none;
+}
 @media (max-width: 600px) {
   .pre-join,
   .pad-mobile {
@@ -266,6 +269,9 @@ fieldset[disabled] .btn-success.active,
     padding-right: 0px;
   }
   .why {
+    display: inline-block;
+  }
+  .divider {
     display: inline-block;
   }
 }
