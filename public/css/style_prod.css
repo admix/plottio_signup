@@ -224,10 +224,8 @@ fieldset[disabled] .btn-success.active,
   display: none;
 }
 .why {
-  display: block;
-}
-.divider {
-  display: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 @media (max-width: 600px) {
   .pre-join,
@@ -267,11 +265,5 @@ fieldset[disabled] .btn-success.active,
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
-  }
-  .why {
-    display: inline-block;
-  }
-  .divider {
-    display: inline-block;
   }
 }
