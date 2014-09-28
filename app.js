@@ -20,13 +20,13 @@ var env = new habitat(),
     server = http.createServer(app),
     port = Number(env.get("PORT") || 8080);
 
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//   res.header("Access-Control-Allow-Headers", "Content-Type");
-//   res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
-//   next();
-// });
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://blog.plottio.com");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+  next();
+});
 var routes = require("./routes");
 
 // starting app server, the last function to call
@@ -50,44 +50,11 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
 
   app.use(express.static(__dirname + "/public"));
 
-  // Application routes
-
-  // function removeWWW(req, res, next){
-  //   console.log("Doing redirection!");
-  //   if (req.headers.host.match(/^www/) !== null ) {
-  //     console.log("www");
-  //     res.redirect('http://' + req.headers.host.replace(/^www\./, '') + req.url);
-  //   } else {
-  //     console.log("next");
-  //     next();
-  //   }
-  // }
-  // app.use(removeWWW);
-
   routes(app, db);
 
   app.use(function(err, req, res, next) {
     // if error occurs
     res.send(500, { error: 'Sorry something bad happened!' });
-  });
-  // Add headers
-  app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://blog.plottio.com');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    // res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware
-    next();
   });
 
   app.post('/', function(req, res) {
