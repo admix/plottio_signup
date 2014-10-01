@@ -22,7 +22,7 @@ function testEmail(db, email, callback) {
 function removeEmail(db, email, callback) {
   "use strict"
   var emails = db.collection("emails");
-  emails.remove({"email": email}, function(err, object) {
+  emails.update({"email": email}, {$set: {"used":false}}, function(err, object) {
     if (err){  //error
       console.warn(err.message);
     }else if(object.email == undefined) {  // returns error if no matching object found

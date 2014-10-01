@@ -26,8 +26,8 @@ $(document).ready(function() {
   });
 
   function processSuccess(data) {
-    console.log(data.res);
     $("#unsubscribe-email").val("");
     $("#after-success").html(data.res);
+    ga('send', 'event', 'Unsubscribe', 'Unsubscribe_button', 'Unsubscribe');
   }
 });
