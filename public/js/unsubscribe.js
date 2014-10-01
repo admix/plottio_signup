@@ -30,4 +30,9 @@ $(document).ready(function() {
     $("#after-success").html(data.res);
     ga('send', 'event', 'Unsubscribe', 'Unsubscribe_button', 'Unsubscribe');
   }
+
+  $("#back").click(function(e) {
+    e.preventDefault();
+    window.open("http://plottio.com");
+  });
 });
