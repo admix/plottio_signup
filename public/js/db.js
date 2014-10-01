@@ -22,15 +22,20 @@ function testEmail(db, email, callback) {
 function removeEmail(db, email, callback) {
   "use strict"
   var emails = db.collection("emails");
-  emails.update({"email": email}, {$set: {"used":false}}, function(err, object) {
+  var emailsBackup = db.collection("emails_backup");
+  emails.remove({"email": email}, function(err, object) {
     if (err){  //error
       console.warn(err.message);
-    }else if(object.email == undefined) {  // returns error if no matching object found
+    }else {  // returns error if no matching object found
       callback(null);
-      return true;
-    }else {
-      callback(null, object.email);
-      return false;
+    }
+  });
+
+  emailsBackup.insert({"email": email,"used":false}, function(err, data) {
+    if(err) {
+      console.warn(err.message);
+    } else {
+
     }
   });
 }

@@ -15,7 +15,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: plottio,
+      url: localhost,
       success: function(data) {
         processSuccess(data, "#up");
       },
