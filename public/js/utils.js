@@ -77,7 +77,8 @@ $(document).ready(function() {
       $("#revoUp").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
       $("#revoDown").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
       //openProgress();
-      ga('send', 'event', 'Signup', 'Signup Button', 'Signup');
+
+      ga('send', 'event', 'Signup: ' + upDown, 'Signup Button', 'Signup');
     }
   }
 
