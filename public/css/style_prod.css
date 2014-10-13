@@ -227,6 +227,23 @@ fieldset[disabled] .btn-success.active,
   font-size: 14px;
   letter-spacing: 0.5px;
 }
+.screenshot img {
+  width: 90%;
+  height: auto;
+}
+
+.screenshot .edit-scr {
+  width: 100%;
+  height: auto;
+}
+
+#edit-mobile {
+  visibility: hidden;
+  display: none;
+}
+#edit-desktop {
+  visibility: visible;
+}
 @media (max-width: 600px) {
   .pre-join,
   .pad-mobile {
@@ -271,5 +288,22 @@ fieldset[disabled] .btn-success.active,
   }
   .centr {
     text-align: center;
+  }
+
+  .screenshot img {
+    width: 100%;
+    height: auto;
+  }
+  #edit-mobile {
+    visibility: visible;
+    display: block;
+  }
+  #edit-desktop {
+    visibility: hidden;
+    display: none;
+  }
+
+  .screenshot h3 {
+    margin-top: 10px;
   }
 }

@@ -1,11 +1,27 @@
 $(document).ready(function() {
-  $("#signup").hide();
+  //$("#signup").hide();
+  $("#join").hide();
   $(".progress").hide();
   $(["[data-toggle='tooltip']"]).tooltip();
-  //URLs for dev
+  // URLs for dev
   var localhost = 'http://localhost:8080/',
       plottio = 'http://plottio.com/';
   var signedUp = false;  //flage to check if email has been submited
+
+  // Modal image
+  $("#img1").click(function(e) {
+    $("#img_modal").attr("src","../images/screen_app/main.png");
+  });
+  $("#img2").click(function(e) {
+    $("#img_modal").attr("src","../images/screen_app/edit.png");
+  });
+  $("#img4").click(function(e) {
+    $("#img_modal").attr("src","../images/screen_app/edit.png");
+  });
+
+  $("#img3").click(function(e) {
+    $("#img_modal").attr("src","../images/screen_app/read.png");
+  });
 
   // Submiting emails Top Page
   $("#submitUp").click(function(e) {
@@ -15,7 +31,7 @@ $(document).ready(function() {
 			type: 'POST',
 			data: JSON.stringify({"email": data}),
       contentType: 'application/json',
-      url: localhost,
+      url: plottio,
       success: function(data) {
         processSuccess(data, "#up");
       },
