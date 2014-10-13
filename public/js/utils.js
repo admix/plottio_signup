@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("#join").hide();
   $(".progress").hide();
   $(["[data-toggle='tooltip']"]).tooltip();
+  $('#usernameUp').tooltip('hide');
   // URLs for dev
   var localhost = 'http://localhost:8080/',
       plottio = 'http://plottio.com/';
@@ -23,36 +24,108 @@ $(document).ready(function() {
     $("#img_modal").attr("src","../images/screen_app/read.png");
   });
 
-  // Submiting emails Top Page
+  //Submiting emails Top Page
   $("#submitUp").click(function(e) {
     e.preventDefault();
-    var data = $("#up").val();
+    var userEmail = $("#up").val();
+    var username = $("#usernameUp").val();
     $.ajax({
-			type: 'POST',
-			data: JSON.stringify({"email": data}),
+      type: 'GET',
+      data: JSON.stringify({"username": username}),
       contentType: 'application/json',
-      url: plottio,
+      url: plottio + username,
       success: function(data) {
-        processSuccess(data, "#up");
+        if(data == "used") {
+          $("#usernameUp").addClass("top-input");
+          $("#usernameUp").tooltip("destroy") // Destroy any pre-existing tooltip so we can repopulate with new tooltip content
+                  .data("title", "Oops! This username is taken.")
+                  .tooltip();
+        } else {
+          $("#usernameUp").removeClass("top-input");
+          $("#usernameUp").data("title", "")
+                  .tooltip("destroy");
+          $.ajax({
+            type: 'POST',
+            data: JSON.stringify({"email": userEmail, "username": username}),
+            contentType: 'application/json',
+            url: plottio,
+            success: function(data) {
+              processSuccess(data, "#up");
+            },
+            error  : function() {
+              console.log('error');
+            }
+          });
+        }
+
       },
       error  : function() {
         console.log('error');
       }
     });
   });
+  $('#usernameUp').blur(function() {
+    var username = $("#usernameUp").val();
+    $.ajax({
+      type: 'GET',
+      data: JSON.stringify({"username": username}),
+      contentType: 'application/json',
+      url: plottio + username,
+      success: function(data) {
+        if(data == "used") {
+          $("#usernameUp").addClass("top-input");
+          $("#usernameUp").tooltip("destroy") // Destroy any pre-existing tooltip so we can repopulate with new tooltip content
+                  .data("title", "Oops! This username is taken.")
+                  .tooltip();
+        } else {
+          $("#usernameUp").removeClass("top-input");
+          $("#usernameUp").data("title", "")
+                  .tooltip("destroy");
+        }
 
+      },
+      error  : function() {
+        console.log('error');
+      }
+    });
+  });
   // Submiting emails Bottom Page
   $("#submitDown").click(function(e) {
     e.preventDefault();
     if(signedUp == false) {
-      var data = $("#down").val();
+      var userEmail = $("#down").val();
+      var username = $("#username").val();
       $.ajax({
-        type: 'POST',
-        data: JSON.stringify({"email": data}),
+        type: 'GET',
+        data: JSON.stringify({"username": username}),
         contentType: 'application/json',
-        url: plottio,
+        url: plottio + username,
         success: function(data) {
-          processSuccess(data, "#down");
+          if(data == "used") {
+            $("#username").addClass("top-input");
+            $("#addon").addClass("top-input");
+            $("#username").tooltip("destroy") // Destroy any pre-existing tooltip so we can repopulate with new tooltip content
+                    .data("title", "Oops! This username is taken.")
+                    .tooltip();
+          } else {
+            $("#username").removeClass("top-input");
+            $("#addon").removeClass("top-input");
+            $("#username").data("title", "")
+                    .tooltip("destroy");
+            $.ajax({
+              type: 'POST',
+              data: JSON.stringify({"email": userEmail,"username": username}),
+              contentType: 'application/json',
+              url: plottio,
+              success: function(data) {
+                processSuccess(data, "#down");
+              },
+              error  : function() {
+                console.log('error');
+              }
+            });
+          }
+
         },
         error  : function() {
           console.log('error');
@@ -61,7 +134,34 @@ $(document).ready(function() {
     } else {
 
     }
+  });
 
+  $('#username').blur(function() {
+    var username = $("#username").val();
+    $.ajax({
+      type: 'GET',
+      data: JSON.stringify({"username": username}),
+      contentType: 'application/json',
+      url: plottio + username,
+      success: function(data) {
+        if(data == "used") {
+          $("#username").addClass("top-input");
+          $("#addon").addClass("top-input");
+          $("#username").tooltip("destroy") // Destroy any pre-existing tooltip so we can repopulate with new tooltip content
+                  .data("title", "Oops! This username is taken.")
+                  .tooltip();
+        } else {
+          $("#username").removeClass("top-input");
+          $("#addon").removeClass("top-input");
+          $("#username").data("title", "")
+                  .tooltip("destroy");
+        }
+
+      },
+      error  : function() {
+        console.log('error');
+      }
+    });
   });
 
   $("#join").click(function(e) {
@@ -80,17 +180,21 @@ $(document).ready(function() {
 
   function processSuccess(data, upDown) {
     console.log(data.res);
+    console.log("data: " + data);
     if(data.res == "already used") {
       $(upDown).val(data.email + " - already used");
+    } else if(data.res == "username required"){
+      $("#usernameUp").val(data.res);
     } else if(data.res == "bad email"){
       $(upDown).val("bad email");
     } else {
       signedUp = true;
       $("#up").val("Thank you");
       $("#down").val("Thank you");
-      $("#submitUp").attr("disabled", true);
+      $("#username").val("Username reserved");
+      $("#usernameUp").val("Username reserved");
       $("#submitDown").attr("disabled", true);
-      $("#revoUp").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
+      $("#submitUp").attr("disabled", true);
       $("#revoDown").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
       //openProgress();
 

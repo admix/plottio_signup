@@ -61,8 +61,12 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db) {
     res.setHeader('Content-Type', 'application/json');
     console.log("processing email: " + req.body.email);
     var email = req.body.email;
+    var username = req.body.username;
+    if(username == "") {
+      res.end(JSON.stringify({"res": "username required"}));
+    }
     if (validator.isEmail(email)){
-      dba.testEmail(db, email, function(err, msg) {
+      dba.testEmail(db, email, username, function(err, msg) {
         if(err) throw err;
         if(msg == null) {
           sendEmail.sendEmail(email);

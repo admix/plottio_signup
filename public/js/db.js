@@ -1,4 +1,4 @@
-function testEmail(db, email, callback) {
+function testEmail(db, email, username, callback) {
   "use strict";
   var emails = db.collection("emails");
   emails.findAndModify(
@@ -10,7 +10,14 @@ function testEmail(db, email, callback) {
       if (err){  //error
         console.warn(err.message);
       }else if(object.email == undefined) {  // returns error if no matching object found
-        callback(null);
+        emails.findAndModify({"email": email},[['_id','asc']],  // sort order
+        {$set: {"username":username}}, function(err, data) {
+          if(err) {
+            console.warn(err.message);
+          } else {
+            callback(null);
+          }
+        });
         return true;
       }else {
         callback(null, object.email);
@@ -40,5 +47,19 @@ function removeEmail(db, email, callback) {
   });
 }
 
+function checkUsername(db, username, callback) {
+  "use strict"
+  var emails = db.collection("emails");
+  emails.findOne({'username': username}, function(err, doc) {
+    if(err || doc == null) {
+      callback(null, "Not found!");
+    } else {
+      //console.log(doc);
+      callback(null, "used");
+    }
+  });
+}
+
 exports.testEmail = testEmail;
 exports.removeEmail = removeEmail;
+exports.checkUsername = checkUsername;

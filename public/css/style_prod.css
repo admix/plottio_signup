@@ -213,7 +213,11 @@ fieldset[disabled] .btn-success.active,
 #submit {
   font-weight: 300;
 }
-.form-control:focus {
+.form-control {
+  border-color: #1abc9c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(26, 188, 156, 0.6);
+}
+.add {
   border-color: #1abc9c;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(26, 188, 156, 0.6);
 }
@@ -244,6 +248,20 @@ fieldset[disabled] .btn-success.active,
 #edit-desktop {
   visibility: visible;
 }
+
+.input-fields {
+  box-shadow: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-left: 0px;
+  border-left: 0px;
+}
+.top-input {
+  border-color: #FF0000;
+  border-left: 1px solid #FF0000;
+}
+
 @media (max-width: 600px) {
   .pre-join,
   .pad-mobile {

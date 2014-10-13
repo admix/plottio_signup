@@ -40,10 +40,13 @@ module.exports = exports = function(app, db) {
       });
     });
 
-    // Page for pre-production testing
-    // app.get('/test', function(req, res) {
-    //   res.render("test.html");
-    // });
+    app.get('/:username', function(req, res) {
+      var username = req.params.username;
+      dba.checkUsername(db, username, function(err, msg) {
+        if(err) throw err;
+        res.end(msg)
+      });
+    });
 
     // Rendering other requests as 404
     app.get('*', function(req, res) {
