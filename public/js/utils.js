@@ -9,7 +9,7 @@ $(document).ready(function() {
   $("#addon").tooltip('hide');
 
   // URLs for dev
-  var plottio = 'http://plottio:8080/',
+  var localhost = 'http://localhost:8080/',
       plottio = 'http://plottio.com/';
   var signedUp = false;  //flage to check if email has been submited
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $("#usernameUp").val($("#usernameUp").val().replace(/\s+/g, ''));
     var username = $("#usernameUp").val();
-    var usernameRegexUp = /^[a-zA-Z0-9]+$/;
+    var usernameRegexUp = /^[a-zA-Z\d\-\_]+$/;
     if(username.match(usernameRegexUp)){
       $("#tool").tooltip('hide');
       $.ajax({
@@ -174,8 +174,9 @@ $(document).ready(function() {
     $("#username").val($("#username").val().replace(/\s+/g, ''));
 
     var username = $("#username").val();
-    var usernameRegex = /^[a-zA-Z\d]+$/;
+    var usernameRegex = /^[a-zA-Z\d\-\_]+$/;
     if(username.match(usernameRegex)) {
+      console.log("in if");
       $("#addon").tooltip('hide');
       $.ajax({
         type: 'GET',
@@ -183,7 +184,9 @@ $(document).ready(function() {
         contentType: 'application/json',
         url: plottio + username,
         success: function(data) {
+          console.log(data);
           if(data == "used") {
+            console.log("used");
             valid = false;
             $("#username").addClass("top-input");
             $("#addon").addClass("top-input");
@@ -193,6 +196,7 @@ $(document).ready(function() {
                         placement : 'right'
                     });
           } else {
+            console.log("true remove");
             valid = true;
             $("#username").removeClass("top-input");
             $("#addon").removeClass("top-input");
@@ -206,6 +210,7 @@ $(document).ready(function() {
         }
       });
     } else {
+      console.log("false blur");
       valid = false;
       $("#username").addClass("top-input");
       $("#addon").addClass("top-input");
