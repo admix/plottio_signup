@@ -262,6 +262,9 @@ fieldset[disabled] .btn-success.active,
   border-left: 1px solid #FF0000;
 }
 
+.tooltip {
+  letter-spacing: 1pt;
+}
 @media (max-width: 600px) {
   .pre-join,
   .pad-mobile {
