@@ -176,7 +176,6 @@ $(document).ready(function() {
     var username = $("#username").val();
     var usernameRegex = /^[a-zA-Z\d\-\_]+$/;
     if(username.match(usernameRegex)) {
-      console.log("in if");
       $("#addon").tooltip('hide');
       $.ajax({
         type: 'GET',
@@ -184,9 +183,7 @@ $(document).ready(function() {
         contentType: 'application/json',
         url: plottio + username,
         success: function(data) {
-          console.log(data);
           if(data == "used") {
-            console.log("used");
             valid = false;
             $("#username").addClass("top-input");
             $("#addon").addClass("top-input");
@@ -196,7 +193,6 @@ $(document).ready(function() {
                         placement : 'right'
                     });
           } else {
-            console.log("true remove");
             valid = true;
             $("#username").removeClass("top-input");
             $("#addon").removeClass("top-input");
@@ -210,7 +206,6 @@ $(document).ready(function() {
         }
       });
     } else {
-      console.log("false blur");
       valid = false;
       $("#username").addClass("top-input");
       $("#addon").addClass("top-input");
@@ -234,8 +229,6 @@ $(document).ready(function() {
   });
 
   function processSuccess(data, upDown) {
-    console.log(data.res);
-    console.log("data: " + data);
     if(data.res == "already used") {
       $(upDown).val(data.email + " - already used");
     } else if(data.res == "username required"){
