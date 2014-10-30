@@ -247,6 +247,7 @@ fieldset[disabled] .btn-success.active,
 }
 #edit-desktop {
   visibility: visible;
+  display: block;
 }
 
 .input-fields {
@@ -264,6 +265,16 @@ fieldset[disabled] .btn-success.active,
 
 .tooltip {
   letter-spacing: 1pt;
+}
+@media (min-width: 600px) {
+  #edit-mobile {
+    visibility: hidden;
+    display: none;
+  }
+  #edit-desktop {
+    visibility: visible;
+    display: block;
+  }
 }
 @media (max-width: 600px) {
   .pre-join,
