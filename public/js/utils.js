@@ -243,7 +243,7 @@ $(document).ready(function() {
       $("#usernameUp").val("Username reserved");
       $("#submitDown").attr("disabled", true);
       $("#submitUp").attr("disabled", true);
-      $("#revoDown").html("<em>Welcome to Plottio! Expected beta - late October.</em>");
+      $("#revoDown").html("<em>Welcome to Plottio! Expected beta - Early November.</em>");
       //openProgress();
 
       ga('send', 'event', 'Signup: ' + upDown, 'Signup Button', 'Signup');
